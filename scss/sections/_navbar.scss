@@ -1,0 +1,94 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+  .logo {
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+
+    span {
+      color: $primaryColor;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+
+    li a {
+      font-size: 2rem;
+      padding: 0 1.5rem;
+      color: #666;
+    }
+  }
+
+  .icons a {
+    font-size: 3rem;
+    color: #333;
+    margin-left: 1.5rem;
+
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+
+  #toggler {
+    display: none;
+  }
+
+  .fa-bars {
+    font-size: 3rem;
+    color: #333;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border: 0.3rem solid rgba(0, 0, 0, 0.3);
+    display: none;
+  }
+}
+
+@include large {
+  .navbar {
+    padding: 2rem;
+  }
+}
+
+@include medium {
+  .navbar {
+    ul {
+      position: absolute;
+      flex-direction: column;
+      top: 100%;
+      left: 0;
+      right: 18rem;
+      background: #eee;
+      border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+      li a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: 0.1rem solid rgba(0, 0, 0, 0.1);
+        display: block;
+      }
+    }
+
+    #toggler:checked ~ ul {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .fa-bars {
+      display: block;
+    }
+  }
+}

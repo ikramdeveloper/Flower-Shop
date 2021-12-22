@@ -1,0 +1,44 @@
+.home {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: url(../../images/home-bg.jpg) center/cover no-repeat;
+
+  .content {
+    max-width: 50rem;
+
+    h3 {
+      font-size: 6rem;
+      color: #333;
+    }
+
+    span {
+      font-size: 3.5rem;
+      color: $primaryColor;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: #999;
+      padding: 1rem 0;
+      line-height: 1.5;
+    }
+  }
+}
+
+@include large {
+  .home {
+    background-position: left;
+  }
+}
+
+@include small {
+  .home .content {
+    h3 {
+      font-size: 5rem;
+    }
+    span {
+      font-size: 2.5rem;
+    }
+  }
+}

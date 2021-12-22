@@ -1,0 +1,45 @@
+.icons-container {
+  background: #eee;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  .icon {
+    background: #fff;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+
+    img {
+      height: 5rem;
+      margin-right: 2rem;
+    }
+
+    h3 {
+      color: #333;
+      padding-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    span {
+      color: #555;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@include medium {
+  .icons-container .icon {
+    h3 {
+      font-size: 2rem;
+    }
+
+    span {
+      font-size: 1.2rem;
+    }
+  }
+}

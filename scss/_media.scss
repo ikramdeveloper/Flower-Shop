@@ -1,0 +1,23 @@
+$size: (
+  "small": 449px,
+  "medium": 768px,
+  "large": 992px,
+);
+
+@mixin small {
+  @media (max-width: map-get($size, small)) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (max-width: map-get($size, medium)) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (max-width: map-get($size, large)) {
+    @content;
+  }
+}
